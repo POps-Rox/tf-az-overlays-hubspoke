@@ -9,7 +9,7 @@
       version = "~> 3.22"
     }
     azurenoopsutils = {
-      source  = "azurenoops/azurenoopsutils"
+      source  = "POps-Rox/azurenoopsutils"
       version = "~> 1.0.4"
     }
   }
