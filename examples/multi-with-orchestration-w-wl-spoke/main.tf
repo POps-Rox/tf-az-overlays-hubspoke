@@ -293,7 +293,7 @@ module "mod_ops_network" {
   spoke_private_link_service_network_policies_enabled = true
 
   # Hub Virtual Network ID
-  hub_virtual_network_id = module.mod_hub_network.virtual_network_id
+  hub_virtual_network_id = module.mod_hub_network.hub_virtual_network_id
 
   # Firewall Private IP Address 
   hub_firewall_private_ip_address = module.mod_hub_network.firewall_private_ip
@@ -381,7 +381,7 @@ module "mod_id_network" {
   spoke_private_link_service_network_policies_enabled = true
 
   # Hub Virtual Network ID
-  hub_virtual_network_id = module.mod_hub_network.virtual_network_id
+  hub_virtual_network_id = module.mod_hub_network.hub_virtual_network_id
 
   # Firewall Private IP Address 
   hub_firewall_private_ip_address = module.mod_hub_network.firewall_private_ip
@@ -469,7 +469,7 @@ module "mod_svcs_network" {
   spoke_private_link_service_network_policies_enabled = true
 
   # Hub Virtual Network ID
-  hub_virtual_network_id = module.mod_hub_network.virtual_network_id
+  hub_virtual_network_id = module.mod_hub_network.hub_virtual_network_id
 
   # Firewall Private IP Address 
   hub_firewall_private_ip_address = module.mod_hub_network.firewall_private_ip
@@ -553,7 +553,7 @@ module "mod_wl_network" {
   spoke_private_link_service_network_policies_enabled = true
 
   # Hub Virtual Network ID
-  hub_virtual_network_id = module.mod_hub_network.virtual_network_id
+  hub_virtual_network_id = module.mod_hub_network.hub_virtual_network_id
 
   # Firewall Private IP Address 
   hub_firewall_private_ip_address = module.mod_hub_network.firewall_private_ip
