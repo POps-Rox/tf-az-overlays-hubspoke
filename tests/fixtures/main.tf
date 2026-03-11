@@ -1,6 +1,12 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
+variable "firewall_supernet_IP_address" {
+  description = "The IP address range for the firewall supernet"
+  type        = string
+  default     = "10.0.96.0/19"
+}
+
 module "hub_spoke_landing_zone" {
   source = "../.."
 
