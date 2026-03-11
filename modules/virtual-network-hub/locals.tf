@@ -14,7 +14,7 @@ resource "random_id" "uniqueString" {
 }
 
 locals {
-  if_ddos_enabled     = var.create_ddos_plan ? [{}] : []
+  if_ddos_enabled = var.create_ddos_plan ? [{}] : []
 
   privateDnsZones_privatelink_monitor_azure_name             = (var.environment == "public" ? "privatelink.monitor.azure.com" : "privatelink.monitor.azure.us")
   privateDnsZones_privatelink_ods_opinsights_azure_name      = (var.environment == "public" ? "privatelink.ods.opinsights.azure.com" : "privatelink.ods.opinsights.azure.us")

@@ -18,7 +18,7 @@ output "hub_virtual_network_name" {
 
 output "hub_virtual_network" {
   description = "The hub virtual network address space"
-  value = module.mod_hub_network.hub_virtual_network_address_space
+  value       = module.mod_hub_network.hub_virtual_network_address_space
 }
 
 output "firewall_private_ip" {

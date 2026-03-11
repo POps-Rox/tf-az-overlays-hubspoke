@@ -11,8 +11,8 @@
 
 module "mod_operational_logging" {
   providers = { azurerm = azurerm.ops }
-  source  = "azurenoops/overlays-hubspoke/azurerm//modules/operational-logging"
-  version = "~> 1.0.5"
+  source    = "azurenoops/overlays-hubspoke/azurerm//modules/operational-logging"
+  version   = "~> 1.0.5"
 
   #####################################
   ## Global Settings Configuration  ###
@@ -42,7 +42,7 @@ module "mod_operational_logging" {
   ######################################
 
   # (Required) To enable Private Endpoint
-  private_endpoint_subnet_id =  module.mod_ops_network.default_subnet_id
+  private_endpoint_subnet_id = module.mod_ops_network.default_subnet_id
 
   ################################
   ## Defender Configuration    ###
@@ -147,11 +147,11 @@ module "mod_hub_network" {
   ## Firewall Configuration  ###
   ##############################
 
- # Firewall Settings
+  # Firewall Settings
   # By default, Azure NoOps will create Azure Firewall in Hub VNet. 
   # If you do not want to create Azure Firewall, 
   # set enable_firewall to false. This will allow different firewall products to be used (Example: F5).  
-  enable_firewall         = true
+  enable_firewall = true
 
   # By default, forced tunneling is enabled for Azure Firewall.
   # If you do not want to enable forced tunneling, 
@@ -259,8 +259,8 @@ module "mod_hub_network" {
 
 module "mod_ops_network" {
   providers = { azurerm = azurerm.ops }
-  source  = "azurenoops/overlays-hubspoke/azurerm/modules/virtual-network-spoke"
-  version = "~> 1.0.5"
+  source    = "azurenoops/overlays-hubspoke/azurerm/modules/virtual-network-spoke"
+  version   = "~> 1.0.5"
 
   #####################################
   ## Global Settings Configuration  ###

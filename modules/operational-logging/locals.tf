@@ -88,7 +88,7 @@ locals {
     "AppServices",
     "Arm",
     "ContainerRegistry",
-    "Containers",    
+    "Containers",
     "Dns",
     "KeyVaults",
     "KubernetesService",

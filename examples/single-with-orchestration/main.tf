@@ -82,7 +82,7 @@ module "hub_spoke_landing_zone" {
   # By default, Azure NoOps will create Azure Firewall in Hub VNet. 
   # If you do not want to create Azure Firewall, 
   # set enable_firewall to false. This will allow different firewall products to be used (Example: F5).  
-  enable_firewall         = true
+  enable_firewall = true
 
   # By default, forced tunneling is enabled for Azure Firewall.
   # If you do not want to enable forced tunneling, 
@@ -220,7 +220,7 @@ module "hub_spoke_landing_zone" {
       protocol                   = "*"
       source_port_range          = "*"
       destination_port_ranges    = ["22", "80", "443", "3389"]
-      source_address_prefixes      = ["10.0.120.0/26","10.0.115.0/26"]
+      source_address_prefixes    = ["10.0.120.0/26", "10.0.115.0/26"]
       destination_address_prefix = "10.0.110.0/26"
     },
   ]
@@ -234,7 +234,7 @@ module "hub_spoke_landing_zone" {
   # and set the argument to `enable_identity_spoke = false`, to disable the spoke.
   enable_identity_spoke = true
 
-   // Identity Subscription
+  // Identity Subscription
   id_subscription_id = "<<subscription_id>>"
 
   # Name for the Identity spoke. It defaults to ops-core.
@@ -273,7 +273,7 @@ module "hub_spoke_landing_zone" {
       protocol                   = "*"
       source_port_range          = "*"
       destination_port_ranges    = ["22", "80", "443", "3389"]
-      source_address_prefixes      = ["10.0.110.0/26","10.0.115.0/26"]
+      source_address_prefixes    = ["10.0.110.0/26", "10.0.115.0/26"]
       destination_address_prefix = "10.0.120.0/26"
     },
   ]
@@ -325,7 +325,7 @@ module "hub_spoke_landing_zone" {
       protocol                   = "*"
       source_port_range          = "*"
       destination_port_ranges    = ["22", "80", "443", "3389"]
-      source_address_prefixes      = ["10.0.110.0/26","10.0.120.0/26"]
+      source_address_prefixes    = ["10.0.110.0/26", "10.0.120.0/26"]
       destination_address_prefix = "10.0.115.0/26"
     },
   ]
@@ -337,13 +337,13 @@ module "hub_spoke_landing_zone" {
 
   # By default, this module will create a bastion host, 
   # and set the argument to `enable_bastion_host = false`, to disable the bastion host.
-  enable_bastion_host = true
-  azure_bastion_host_sku = "Standard"
+  enable_bastion_host                 = true
+  azure_bastion_host_sku              = "Standard"
   azure_bastion_subnet_address_prefix = ["10.0.100.160/27"]
 
   # Bastion Public IP
   azure_bastion_public_ip_allocation_method = "Static"
-  azure_bastion_public_ip_sku = "Standard"
+  azure_bastion_public_ip_sku               = "Standard"
 
   #############################
   ## Misc Configuration     ###
@@ -351,7 +351,7 @@ module "hub_spoke_landing_zone" {
 
   # By default, this will apply resource locks to all resources created by this module.
   # To disable resource locks, set the argument to `enable_resource_locks = false`.
-  enable_resource_locks = false  
+  enable_resource_locks = false
 
   # Tags
   //add_tags = {} # Tags to be applied to all resources

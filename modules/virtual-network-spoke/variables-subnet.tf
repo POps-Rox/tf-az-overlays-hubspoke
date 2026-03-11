@@ -28,8 +28,8 @@ variable "spoke_private_link_service_network_policies_enabled" {
 }
 
 variable "add_subnets" {
-  description = "A list of subnets to add to the spoke" 
-  default =  {}
+  description = "A list of subnets to add to the spoke"
+  default     = {}
 }
 
 

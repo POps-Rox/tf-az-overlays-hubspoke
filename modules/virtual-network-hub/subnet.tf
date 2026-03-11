@@ -28,10 +28,10 @@ resource "azurerm_subnet" "default_snet" {
 }
 
 resource "azurerm_subnet" "additional_snets" {
-  for_each                                      = var.add_subnets
-  name                                          = lower(format("${var.org_name}-${module.mod_azregions.location_cli}-%s-snet", each.value.name))
-  resource_group_name                           = module.mod_hub_rg.0.resource_group_name
-  virtual_network_name                          = azurerm_virtual_network.hub_vnet.name
+  for_each             = var.add_subnets
+  name                 = lower(format("${var.org_name}-${module.mod_azregions.location_cli}-%s-snet", each.value.name))
+  resource_group_name  = module.mod_hub_rg.0.resource_group_name
+  virtual_network_name = azurerm_virtual_network.hub_vnet.name
   address_prefixes     = each.value.address_prefixes
   service_endpoints    = lookup(each.value, "service_endpoints", [])
   # Applicable to the subnets which used for Private link endpoints or services 

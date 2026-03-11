@@ -11,8 +11,8 @@
 
 module "mod_operational_logging" {
   providers = { azurerm = azurerm.ops }
-  source  = "azurenoops/overlays-hubspoke/azurerm/modules/operational-logging"
-  version = "~> 1.0.5"
+  source    = "azurenoops/overlays-hubspoke/azurerm/modules/operational-logging"
+  version   = "~> 1.0.5"
 
   #####################################
   ## Global Settings Configuration  ###

@@ -15,7 +15,7 @@ terraform {
   }
 }
 
-provider "azurerm" {  
+provider "azurerm" {
   environment     = "usgovernment"
   metadata_host   = "management.usgovcloudapi.net"
   subscription_id = "<<subscription_id>>"

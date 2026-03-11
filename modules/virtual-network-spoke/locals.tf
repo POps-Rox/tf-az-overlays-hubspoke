@@ -13,5 +13,5 @@ resource "random_id" "uniqueString" {
   byte_length = 8
 }
 
-locals {  
+locals {
 }

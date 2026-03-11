@@ -25,7 +25,7 @@ variable "enable_sentinel" {
 
 variable "enable_defender_for_cloud" {
   description = "Enables Azure Defender for Cloud. Default is true."
- type        = bool
+  type        = bool
   default     = true
 }
 

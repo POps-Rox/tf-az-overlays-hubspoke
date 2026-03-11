@@ -3,7 +3,7 @@
 
 resource "azurerm_private_endpoint" "subnet_private_endpoint" {
   depends_on = [
-    azurerm_monitor_private_link_scoped_service.laws_pls    
+    azurerm_monitor_private_link_scoped_service.laws_pls
   ]
   name     = local.privateLinkEndpointName
   location = module.mod_logging_rg.0.resource_group_location

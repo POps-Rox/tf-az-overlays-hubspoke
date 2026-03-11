@@ -23,7 +23,7 @@ module "mod_spoke_rg" {
   source  = "azurenoops/overlays-resource-group/azurerm"
   version = "~> 1.0.1"
 
-  count    = var.create_spoke_resource_group ? 1 : 0
+  count = var.create_spoke_resource_group ? 1 : 0
 
   location                = module.mod_azregions.location_cli
   use_location_short_name = var.use_location_short_name # Use the short location name in the resource group name
