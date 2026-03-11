@@ -12,7 +12,7 @@ AUTHOR/S: jspinella
 ### Shared Services Spoke Network Configuration ###
 ###################################################1
 module "mod_svcs_network" {
-  providers = { azurerm = azurerm.svcs }
+  providers = { azurerm = azurerm.svcs, azurerm.hub_network = azurerm.hub }
   depends_on = [
     module.mod_hub_network,
     module.mod_ops_network,

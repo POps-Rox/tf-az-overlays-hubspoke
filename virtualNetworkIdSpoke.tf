@@ -12,7 +12,7 @@ AUTHOR/S: jspinella
 ### Identity Spoke Network Configuration ###
 ###################################################1
 module "mod_id_network" {
-  providers = { azurerm = azurerm.id }
+  providers = { azurerm = azurerm.id, azurerm.hub_network = azurerm.hub }
   depends_on = [
     module.mod_hub_network,
     module.mod_ops_network,

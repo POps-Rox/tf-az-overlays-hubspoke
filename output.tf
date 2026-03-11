@@ -118,80 +118,80 @@ output "ops_default_subnet_name" {
 
 output "id_resource_group_name" {
   description = "The name of the identity spoke virtual network resource group"
-  value       = module.mod_id_network.resource_group_name
+  value       = try(module.mod_id_network[0].resource_group_name, null)
 }
 
 output "id_virtual_network_name" {
   description = "The name of the identity spoke virtual network"
-  value       = module.mod_id_network.virtual_network_name
+  value       = try(module.mod_id_network[0].virtual_network_name, null)
 }
 
 output "id_virtual_network_id" {
   description = "The id of the identity spoke virtual network"
-  value       = module.mod_id_network.virtual_network_id
+  value       = try(module.mod_id_network[0].virtual_network_id, null)
 }
 
 output "id_virtual_network_address_space" {
   description = "List of address spaces that are used the identity virtual network."
-  value       = module.mod_id_network.virtual_network_address_space
+  value       = try(module.mod_id_network[0].virtual_network_address_space, null)
 }
 
 output "id_nsg_id" {
   description = "The id of the identity spoke nsg"
-  value       = module.mod_id_network.nsg_id
+  value       = try(module.mod_id_network[0].nsg_id, null)
 }
 
 output "id_nsg_name" {
   description = "The name of the identity spoke nsg"
-  value       = module.mod_id_network.nsg_name
+  value       = try(module.mod_id_network[0].nsg_name, null)
 }
 
 output "id_default_subnet_id" {
   description = "The id of the default subnet for the identity spoke"
-  value       = module.mod_id_network.default_subnet_id
+  value       = try(module.mod_id_network[0].default_subnet_id, null)
 }
 
 output "id_default_subnet_name" {
   description = "The id of the default subnet for the identity spoke"
-  value       = module.mod_id_network.default_subnet_name
+  value       = try(module.mod_id_network[0].default_subnet_name, null)
 }
 
 output "svcs_resource_group_name" {
   description = "The name of the shared services spoke virtual network resource group"
-  value       = module.mod_svcs_network.resource_group_name
+  value       = try(module.mod_svcs_network[0].resource_group_name, null)
 }
 
 output "svcs_virtual_network_name" {
   description = "The name of the shared services spoke virtual network"
-  value       = module.mod_svcs_network.virtual_network_name
+  value       = try(module.mod_svcs_network[0].virtual_network_name, null)
 }
 
 output "svcs_virtual_network_svcs" {
   description = "The id of the shared services spoke virtual network"
-  value       = module.mod_svcs_network.virtual_network_svcs
+  value       = try(module.mod_svcs_network[0].virtual_network_svcs, null)
 }
 
 output "svcs_virtual_network_address_space" {
   description = "List of address spaces that are used the shared services virtual network."
-  value       = module.mod_svcs_network.virtual_network_address_space
+  value       = try(module.mod_svcs_network[0].virtual_network_address_space, null)
 }
 
 output "svcs_nsg_svcs" {
   description = "The svcs of the shared services spoke nsg"
-  value       = module.mod_svcs_network.nsg_svcs
+  value       = try(module.mod_svcs_network[0].nsg_svcs, null)
 }
 
 output "svcs_nsg_name" {
   description = "The name of the shared services spoke nsg"
-  value       = module.mod_svcs_network.nsg_name
+  value       = try(module.mod_svcs_network[0].nsg_name, null)
 }
 
 output "svcs_default_subnet_svcs" {
   description = "The id of the default subnet for the shared services spoke"
-  value       = module.mod_svcs_network.default_subnet_svcs
+  value       = try(module.mod_svcs_network[0].default_subnet_svcs, null)
 }
 
 output "svcs_default_subnet_name" {
   description = "The id of the default subnet for the shared services spoke"
-  value       = module.mod_svcs_network.default_subnet_name
+  value       = try(module.mod_svcs_network[0].default_subnet_name, null)
 }
