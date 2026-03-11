@@ -6,7 +6,6 @@
 #----------------------------------------------------------
 module "mod_azregions" {
   source  = "github.com/POps-Rox/tf-az-overlays-azregionslookup"
-  version = "~> 1.0.0"
 
   azure_region = var.location
 }
@@ -21,7 +20,6 @@ data "azurerm_resource_group" "logging_rgrp" {
 
 module "mod_logging_rg" {
   source  = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
-  version = "~> 1.0.1"
 
   count = var.create_logging_resource_group ? 1 : 0
 
