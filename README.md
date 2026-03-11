@@ -9,8 +9,8 @@
 # IMPORTANT 
 
 > ALERT: This repo will be archived soon. Please use the new modules for creating Hub/Spoke models. 
-> - Management Hub: https://github.com/azurenoops/terraform-azurerm-overlays-management-hub
-> - Management Spoke: https://github.com/azurenoops/terraform-azurerm-overlays-management-spoke
+> - Management Hub: https://github.com/POps-Rox/tf-az-overlays-management-hub
+> - Management Spoke: https://github.com/POps-Rox/tf-az-overlays-management-spoke
 <BR/>
 <BR/>
 <BR/>
