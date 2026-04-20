@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-data "popsrox_utils_resource_name" "logging_st" {
+data "popsrox_resource_name" "logging_st" {
   name          = random_id.uniqueString.hex
   resource_type = "azurerm_storage_account"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -9,7 +9,7 @@ data "popsrox_utils_resource_name" "logging_st" {
   use_slug      = var.use_naming
 }
 
-data "popsrox_utils_resource_name" "laws" {
+data "popsrox_resource_name" "laws" {
   name          = var.workload_name
   resource_type = "azurerm_log_analytics_workspace"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
