@@ -14,7 +14,7 @@ This module deploys a spoke network using the [Microsoft recommended Hub-Spoke n
 # Licensed under the MIT License.
 
 module "mod_spoke_network" {  
-  source  = "azurenoops/overlays-hubspoke/azurerm/modules/virtual-network-spoke"
+  source  = "POps-Rox/overlays-hubspoke/azurerm/modules/virtual-network-spoke"
   version = "~> 1.0.0"
 
   #####################################
@@ -93,15 +93,15 @@ module "mod_spoke_network" {
 
 | Name | Version |
 |------|---------|
-| azurenoopsutils | ~> 1.0.4 |
+|  popsrox-utils | ~> 1.0.4 |
 | azurerm | ~> 3.22 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| mod\_azregions | azurenoops/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
-| mod\_spoke\_rg | azurenoops/overlays-resource-group/azurerm | ~> 1.0.1 |
+| mod\_azregions | POps-Rox/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
+| mod\_spoke\_rg | POps-Rox/overlays-resource-group/azurerm | ~> 1.0.1 |
 
 ## Resources
 
@@ -135,11 +135,11 @@ module "mod_spoke_network" {
 | [azurerm_virtual_network.spoke_vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
 | [azurerm_virtual_network_peering.hub_to_spoke](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering) | resource |
 | [azurerm_virtual_network_peering.spoke_to_hub](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering) | resource |
-| [azurenoopsutils_resource_name.nsg](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.rt](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.snet](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.st](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.vnet](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.nsg](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.rt](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.snet](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.st](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.vnet](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
 | [azurerm_resource_group.netwatch](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
 | [azurerm_resource_group.rgrp](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
 
