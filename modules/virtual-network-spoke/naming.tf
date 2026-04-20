@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-data "azurenoopsutils_resource_name" "vnet" {
+data "popsrox_utils_resource_name" "vnet" {
   name          = var.workload_name
   resource_type = "azurerm_virtual_network"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -11,7 +11,7 @@ data "azurenoopsutils_resource_name" "vnet" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "snet" {
+data "popsrox_utils_resource_name" "snet" {
   name          = var.workload_name
   resource_type = "azurerm_subnet"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -21,7 +21,7 @@ data "azurenoopsutils_resource_name" "snet" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "nsg" {
+data "popsrox_utils_resource_name" "nsg" {
   name          = var.workload_name
   resource_type = "azurerm_network_security_group"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -31,7 +31,7 @@ data "azurenoopsutils_resource_name" "nsg" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "rt" {
+data "popsrox_utils_resource_name" "rt" {
   name          = var.workload_name
   resource_type = "azurerm_route_table"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]
@@ -41,7 +41,7 @@ data "azurenoopsutils_resource_name" "rt" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "st" {
+data "popsrox_utils_resource_name" "st" {
   name          = random_id.uniqueString.hex
   resource_type = "azurerm_storage_account"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : module.mod_azregions.location_cli]

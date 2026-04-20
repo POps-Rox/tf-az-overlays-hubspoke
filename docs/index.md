@@ -19,7 +19,7 @@
 
 [![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azuremoops/terraform-azurerm-overlays-hubspoke/azurerm/)
 
-A terraform feature which includes modules needed to create an SCCA compliant Hub/Spoke Landing Zone based on the [Microsoft Azure Hub-Spoke Architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) and can be used with the [Azure NoOps Accelerator](http://aka.ms/azurenoops).
+A terraform feature which includes modules needed to create an SCCA compliant Hub/Spoke Landing Zone based on the [Microsoft Azure Hub-Spoke Architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli).
 
 Overlay Feature includes:
 

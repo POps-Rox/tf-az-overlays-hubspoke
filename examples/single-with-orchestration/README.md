@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 module "hub-spoke" {
-  source  = "azurenoops/overlays-hubspoke/azurerm"
+  source  = "POps-Rox/overlays-hubspoke/azurerm"
   version = "~> 1.0.0"
 
   #####################################
