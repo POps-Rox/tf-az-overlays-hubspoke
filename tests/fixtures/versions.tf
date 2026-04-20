@@ -9,7 +9,7 @@
       version = "~> 3.22"
     }
     popsrox-utils = {
-      source  = "POps-Rox/popsrox-utils"
+      source  = "POps-Rox/azutils"
       version = "~> 1.0.4"
     }
   }
